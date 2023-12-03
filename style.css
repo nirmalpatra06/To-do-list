@@ -50,7 +50,7 @@ button {
   border: none;
   padding: 15px 40px;
   border-radius: 40px;
-  background-color: orange;
+  background-color: rgb(27, 27, 141);
   color: #fff;
   cursor: pointer;
   font-size: 16px;
@@ -62,6 +62,7 @@ ul li {
   cursor: pointer;
   user-select: none;
   position: relative;
+  font-weight: 600;
 }
 
 ul li::before {
@@ -69,7 +70,31 @@ ul li::before {
   position: absolute;
   height: 30px;
   width: 30px;
-  border-radius: 50px;
+  border-radius: 50%;
   background-size: cover;
   background-position: center;
+  background-image: url(images/radio.png);
+  top: 5px;
+  left: 10px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.png);
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  font-size: 15px;
+  border-radius: 50%;
+  padding: 5px;
+}
+ul li span:hover {
+  background: #918f8f;
 }
